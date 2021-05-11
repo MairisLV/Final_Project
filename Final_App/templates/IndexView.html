@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database of all Loans</title>
+</head>
+<body>
+   <h2><u>Loan List!</u></h2>
+    
+    <ul>
+        {% for obj in object_list %}
+        <li>
+            <h3>Loan ID: <a href='{% url "loan-details" obj.pk %}'> {{obj.id}}</a><br></h3>
+            Loan Amount: {{ obj.loan_amount}}<br>
+            Loan Term: {{ obj.loan_term}}<br>
+            Loan Interest Rate: {{ obj.interest_rate}}<br>
+            <strong>Interest: {{ obj.interest_pmt}} </strong>
+
+        </li><br>
+        {% endfor %}
+    </ul>
+  
+
+</body>
+</html>

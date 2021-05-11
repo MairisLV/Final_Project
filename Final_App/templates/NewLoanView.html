@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request a New Loan</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        Loan Amount: <input type="text" name="loan_amount"> <br>
+        Loan Term: <input type="text" name="loan_term"> <br>
+        Loan Interest Rate: <input type="text" name="interest_rate"> <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
